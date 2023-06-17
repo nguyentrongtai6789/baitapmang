@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let a = prompt('Nhập vào một chuỗi kí tự:');
+  let b = a.split('');
+  let c = [];
+  let INHOA = 'QWERTYUIOPASDFGHJKLZXCVBNM'
+  let inthuong = 'qwertyuiopasdfghjklzxcvbnm'
+  for (let i = 0; i < a.length; i++) {
+    if (INHOA.indexOf(b[i])!==-1) {
+        c.push(b[i].toLowerCase())
+    }
+    else if (inthuong.indexOf(b[i])!==-1) {
+        c.push(b[i].toUpperCase())
+    }
+    else c.push(b[i])
+  }
+  document.write(c.join(''))
+</script>
+</html>

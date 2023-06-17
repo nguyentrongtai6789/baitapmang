@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = prompt('Nhập vào số hàng:');
+    let b = prompt('Nhập vào số cột:');
+    let c = [];
+    for (let i = 0; i < a; i++) {
+        c[i] = [];
+        for (let j = 0; j < b; j++) {
+            c[i][j] = prompt('Nhập vào các giá trị:')
+        }
+    }
+    for (let i = 0; i < a; i++) {
+        for (let j = 0; j < b; j++) {
+            document.write(c[i][j] + ' ')
+        }
+        document.write('<br>')
+    }
+</script>
+</html>

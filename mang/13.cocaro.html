@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id= 'xxx'></p>
+<br><br>
+</body>
+<script>
+    let c = [];
+    let d = '';
+    for (let i = 0; i < 5; i++) {
+        c[i] = [0,0,0,0,0];
+        for (let j = 0; j < 5; j++) {
+            d = d + c[i][j]+ '&nbsp;&nbsp;&nbsp;&nbsp';
+        }
+        d = d + '<br>'
+    }
+        d= d + '<br><button type="submit" onclick="changeVL()">Change value</button>'
+    document.getElementById('xxx').innerHTML = d;
+    function changeVL() {
+        a = +prompt("Nhập toạ độ ngang: ")
+        b = + prompt('Nhập toạ độ dọc: ')
+        d = '';
+        c[a][b] = 'x'
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                d = d + c[i][j]+ '&nbsp;&nbsp;&nbsp;&nbsp';
+            }
+            d = d + '<br>'
+
+        }
+        d = d + '<br><button type="submit" onclick="changeVL()">Change value</button>'
+        document.getElementById('xxx').innerHTML = d;
+    }
+</script>
+</html>

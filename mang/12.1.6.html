@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="value"/>
+<button type="button" id="add" onclick="add()" >add</button>
+<button type="button" id="display" onclick="display()">display</button>
+<p id="ketqua"></p>
+</body>
+<script>
+    let x = 0;
+    let a = Array();
+    function add() {
+        a[x] = document.getElementById('value').value;
+        alert('giá trị ' + a[x] + 'vừa được nhập vào mảng tại vị trí ' + x);
+        x++;
+        document.getElementById('value').value = '';
+    }
+    function display() {
+        let e = '';
+        for (let i = 0; i < a.length; i++) {
+        e += 'biến thứ ' + i + 'có giá trị là ' + a[i] + '<br>';
+        }
+        document.getElementById('ketqua').innerHTML = e;
+    }
+
+</script>
+</html>

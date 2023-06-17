@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = prompt("nhập vào một số:");
+    let b = a.split('');
+    let c = [b[0]];
+    console.log(b);
+    for (let i = 1; i < b.length; i++) {
+        if (b[i-1]%2===0 && b[i]%2===0) {
+            c.push( '-',b[i])
+        }
+        else {
+            c.push (b[i])
+        }
+    }
+    document.write(c.join(''))
+</script>
+</html>

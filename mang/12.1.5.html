@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng</title>
+    <style>
+        body {
+            padding-top: 50px
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="txtValue"/>
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+<div id="result"></div>
+</body>
+<script>
+    let x = 0;
+    let a = Array();
+
+    function add_element_to_array() {
+        a[x] = document.getElementById("txtValue").value;
+        alert("Element: " + a[x] + " Added at index " + x);
+        x++;
+        document.getElementById("txtValue ").value = "";
+    }
+
+    function display_array() {
+        let e = '';
+        for (let i = 0; i < a.length; i++) {
+            e += "Element " + i + " = " + a[i] + "<br/>";
+        }
+        document.getElementById('result').innerHTML = e;
+    }
+</script>
+</html>

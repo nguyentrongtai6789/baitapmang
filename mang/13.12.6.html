@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = prompt('nhập vào chuỗi kí tự: ');
+    let b = a.split('');
+    console.log(b);
+    for (let i = 0; i < b.length; i++) {
+        if (b[i]==='-') {
+            b[i] = '_'
+        }
+
+    }
+    document.write(b + '<br>');
+    document.write(b.join(''))
+</script>
+</html>
